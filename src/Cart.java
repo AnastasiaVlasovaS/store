@@ -2,21 +2,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private final List<Product> products;
-
-    public Cart() {
-        this.products = new ArrayList<>();
-    }
+    private final List<Product> products = new ArrayList<>();
 
     public void addProduct(Product product) {
         products.add(product);
     }
 
     public void displayCart() {
-        products.forEach(System.out::println);
+        for (Product product : products) {
+            System.out.println(product);
+        }
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public double calculateTotal() {
+        double total = 0.0;
+        return total;
     }
 }
